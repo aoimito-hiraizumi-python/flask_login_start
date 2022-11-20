@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>SignUp</h1>
-    <form action="/signup" method="post">
-        <input type="text" name="name" placeholder="name">
-        <br>
-        <!-- <input type="email" name="email" placeholder="email">
-        <br> -->
-        <input type="password" name="password" placeholder="password">
-        <br>
-        <input type="submit" value="SignUp">
-    </form>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+            <form action="/signup" method="post">
+                <h1 class="mt-5">SignUp</h1>
+                <div class="input-group mb-3">  
+                <!-- mb-3 margin bottom 3 -->
+                    <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>        
+                <div class="input-group mb-3">  
+                    <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                </div>        
+                <!-- <input type="text" name="name" placeholder="name">         
+                <input type="password" name="password" placeholder="password">         -->
+                <input class="btn btn-info" type="submit" value="SignUp">    
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
